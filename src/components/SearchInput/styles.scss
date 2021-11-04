@@ -1,0 +1,23 @@
+.container-input {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+  img {
+    width: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+}
+
+.search-input {
+  height: 45px;
+  width: 60%;
+  outline: none;
+  border: 0px;
+  border-radius: 8px;
+  margin: 15px 0 15px 0;
+  padding: 8px;
+}
