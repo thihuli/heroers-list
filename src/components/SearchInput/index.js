@@ -1,10 +1,10 @@
-import React from 'react';
-import './styles.scss';
+import React from 'react'
+import './styles.scss'
 
-function SearchInput({ value, onChange, label }) {
+function SearchInput ({ value, onChange, label }) {
   const handleChange = (event) => {
     onChange(event.target.value)
-  };
+  }
 
   return (
     <div className='container-input'>
@@ -16,7 +16,7 @@ function SearchInput({ value, onChange, label }) {
         placeholder={label}
       />
     </div>
-  );
+  )
 }
 
-export default SearchInput;
+export default SearchInput

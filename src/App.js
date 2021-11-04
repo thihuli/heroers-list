@@ -1,31 +1,31 @@
-import './App.scss';
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useState } from 'react';
-import { fetchHeroes } from './@redux/slice/someHeroesSlice';
-import { addHero, changeVisible } from './@redux/slice/heroSlice';
-import ClipLoader from "react-spinners/ClipLoader";
-import CardHeroes from './components/CardHero/card';
-import Modal from './components/Modal/modal';
-import CardInformation from './components/CardInformation/CardInformation';
-import SearchInput from './components/SearchInput/SearchInput';
+import './App.scss'
+import { useSelector, useDispatch } from 'react-redux'
+import { useEffect, useState } from 'react'
+import { fetchHeroes } from './@redux/slice/someHeroesSlice'
+import { addHero, changeVisible } from './@redux/slice/heroSlice'
+import ClipLoader from 'react-spinners/ClipLoader'
+import CardHeroes from './components/CardHero'
+import Modal from './components/Modal'
+import CardInformation from './components/CardInformation'
+import SearchInput from './components/SearchInput'
 
-function App() {
-  const { status, heroes: { results } } = useSelector((state) => state?.sameHeroes);
-  const { visible, hero } = useSelector(state => state.hero);
-  const [textSearch, setTextSearch ] = useState('');
-  const dispatch = useDispatch();
+function App () {
+  const { status, heroes: { results } } = useSelector((state) => state?.sameHeroes)
+  const { visible, hero } = useSelector(state => state.hero)
+  const [textSearch, setTextSearch] = useState('')
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (status === 'idle') {
-      dispatch(fetchHeroes());
+      dispatch(fetchHeroes())
     }
-  }, [dispatch, status]);
+  }, [dispatch, status])
 
   const lowecaseSearch = textSearch?.toLowerCase()
 
-  const filterHeros = results?.filter(hero => 
+  const filterHeros = results?.filter(hero =>
     hero?.name.toLowerCase().includes(lowecaseSearch)
-    );
+  )
 
   const renderCard = () => {
     return (
@@ -38,7 +38,7 @@ function App() {
         />
       ))
     )
-  };
+  }
 
   return (
     <div className='App'>
@@ -54,7 +54,7 @@ function App() {
         ? <ClipLoader size={200} />
         : (
           <div className='container'>
-            <SearchInput 
+            <SearchInput
               value={textSearch}
               onChange={search => setTextSearch(search)}
               label='Pesquise seu herói...'
@@ -64,8 +64,7 @@ function App() {
               {renderCard()}
             </div>
           </div>
-        )
-      }
+          )}
     </div>
   )
 }

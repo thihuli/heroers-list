@@ -1,10 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   hero: {},
   visible: false
-};
-
+}
 
 const heroSlice = createSlice({
   name: 'hero',
@@ -23,8 +22,8 @@ const heroSlice = createSlice({
       state.visible = newState.visible
     }
   }
-});
+})
 
-export const { addHero, changeVisible } = heroSlice.actions;
+export const { addHero, changeVisible } = heroSlice.actions
 
-export default heroSlice.reducer;
+export default heroSlice.reducer
