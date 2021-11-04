@@ -1,8 +1,8 @@
 # Como iniciar esse projeto
 
-Foi utilitazado o  [Create React App](https://github.com/facebook/create-react-app) para sua criação.
+Foi utilitazado o [Create React App](https://github.com/facebook/create-react-app) para sua criação.
 
-# Para construcação foi utilizado as seguintes tecnologias
+# Para construção foi utilizado as seguintes tecnologias
   - React [https://pt-br.reactjs.org/]
   - Javascript [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript]
   - Redux [https://redux.js.org/]
