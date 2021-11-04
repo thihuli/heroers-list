@@ -28,6 +28,14 @@ body {
   justify-content: center;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1800px;
+  
+}
+
 .render-card {
   display: flex;
   flex-wrap: wrap;
